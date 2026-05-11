@@ -1,7 +1,7 @@
 # choose-your-own-hypothesis-Anh-Nguyen-09
 Food Insecurity and Income During COVID-19
 
-**1. Research Question**
+##1. Research Question
 Did low-income households (under $35,000/year) experience significantly higher food insecurity rates than high-income households ($75,000+/year) during the COVID-19 pandemic?
 This matters because food insecurity has direct consequences for physical and mental health, child development, and long-term economic mobility. If income strongly predicts food insecurity even during a period of expanded government assistance, that has important implications for the design of safety-net programs.
 
