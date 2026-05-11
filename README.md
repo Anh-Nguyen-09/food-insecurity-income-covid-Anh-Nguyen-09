@@ -1,16 +1,16 @@
 # choose-your-own-hypothesis-Anh-Nguyen-09
 Food Insecurity and Income During COVID-19
 
-##1. Research Question
+## 1. Research Question
 Did low-income households (under $35,000/year) experience significantly higher food insecurity rates than high-income households ($75,000+/year) during the COVID-19 pandemic?
 This matters because food insecurity has direct consequences for physical and mental health, child development, and long-term economic mobility. If income strongly predicts food insecurity even during a period of expanded government assistance, that has important implications for the design of safety-net programs.
 
-**2. Hypothesis**
+## 2. Hypothesis
 **Null hypothesis:** There is no difference in food insecurity rates between low-income and high-income households. Any observed difference is due to chance.
 
 **Alternative hypothesis:** Low-income households had significantly higher food insecurity rates than high-income households throughout 2020–2021.
 
-**3. Data Description**
+## 3. Data Description
 **Source:** U.S. Census Bureau Household Pulse Survey, 2020–2021, compiled by Jack Ogozaly on Kaggle: https://www.kaggle.com/datasets/jackogozaly/pulse-survey-food-insecurity-data
 
 **Original source:** U.S. Census Bureau — https://www.census.gov/programs-surveys/household-pulse-survey.html
@@ -50,7 +50,7 @@ This matters because food insecurity has direct consequences for physical and me
 |$200,000 and above|0.008|0.007|0.005|
 
 
-**4. Methods**
+## 4. Methods
 **Permutation test:**
 - Test statistic: Mean insecurity rate (low-income) − mean insecurity rate (high-income) across all survey weeks
 - Null simulation: Pool all low-income and high-income weekly rates, randomly shuffle the group labels, and recompute the mean difference — repeated 10,000 times
@@ -61,7 +61,7 @@ This matters because food insecurity has direct consequences for physical and me
 - Method: Resample with replacement from the 46 low-income weekly rate observations, compute the median each time — repeated 10,000 times
 - Why CLT does not apply: The median is not a mean or proportion, so the Central Limit Theorem does not guarantee a normal sampling distribution, especially with only 46 observations. Bootstrapping is used to estimate the 95% confidence interval without assuming normality.
 
-**5. Results**
+## 5. Results
 **Permutation test:**
 - Observed difference in mean insecurity rates (low − high): 0.2047
 - Low-income mean: 22.5% | High-income mean: 2.0%
@@ -75,7 +75,7 @@ This matters because food insecurity has direct consequences for physical and me
 
 **Key finding:** Low-income households reported food insecurity rates roughly 10–15x higher than high-income households throughout the entire 2020–2021 period, and this gap is highly statistically significant.
 
-**6. Uncertainty Estimation**
+## 6. Uncertainty Estimation
 **Number of resamples:** 10,000 for both the permutation test and bootstrap
 
 **Bootstrap distribution:** The bootstrap distribution of median insecurity rates for the low-income group was approximately symmetric and centered around 0.2225, with a 95% CI of [0.1883, 0.2570]
@@ -84,7 +84,7 @@ This matters because food insecurity has direct consequences for physical and me
 
 **Permutation distribution:** The null distribution of simulated differences was centered at 0 and ranged from roughly −0.071 to +0.066. The observed difference of 0.205 lies far outside this range, yielding a p-value of 0.0000
 
-**7. Limitations**
+## 7. Limitations
 **Aggregated data:** The dataset contains population estimates rather than individual survey responses, which limits the types of statistical tests available and means each "observation" in our analysis is itself an aggregate
 
 **Two income groups only:** By collapsing income into low vs. high, we lose nuance — the data shows a smooth gradient from 27.6% (under $25k) down to 0.8% ($200k+), not just two distinct levels
@@ -95,7 +95,7 @@ This matters because food insecurity has direct consequences for physical and me
 
 **Time period:** Data covers only 2020–2021 during the acute phase of COVID-19; results may not generalize to other time periods
 
-**8. References**
+## 8. References
 - Ogozaly, J. (2021). Pulse Survey Food Insecurity Data. Kaggle. https://www.kaggle.com/datasets/jackogozaly/pulse-survey-food-insecurity-data
 
 - U.S. Census Bureau. Household Pulse Survey. https://www.census.gov/programs-surveys/household-pulse-survey.html
