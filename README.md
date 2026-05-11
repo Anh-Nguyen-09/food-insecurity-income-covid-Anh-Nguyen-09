@@ -38,7 +38,7 @@ This matters because food insecurity has direct consequences for physical and me
     - High-income: "$75,000 – $99,999", "$100,000 – $149,999", "$150,000 – $199,999", "$200,000 and above"
 
 - Summary statistics by income group:
-   | Income Group | Mean Rate | Median Rate | Std Dev |
+| Income Group | Mean Rate | Median Rate | Std Dev |
 |---|---|---|---|
 | Less than $25,000 | 0.276 | 0.278 | 0.032 |
 | $25,000 – $34,999 | 0.174 | 0.166 | 0.026 |
